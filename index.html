@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jeffrey Cooperhouse — Consumer Insights & Strategy</title>
+<meta name="description" content="Consumer insights and market research lead based in San Diego. Six years across global CPG, retail intelligence, family entertainment, and short-form video.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FAF7F2; --bg-alt:#F3EFE8; --ink:#2B2A28; --ink-soft:#5C5A56;
+  --accent:#B5533C; --accent-soft:#D7A694; --rule:#E4DED3;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;font-weight:400;-webkit-font-smoothing:antialiased}
+.container{max-width:880px;margin:0 auto;padding:0 32px}
+h1,h2,h3,h4,.serif{font-family:'Playfair Display',Georgia,serif;font-weight:500;letter-spacing:-0.01em}
+
+nav.top{position:sticky;top:0;z-index:50;background:rgba(250,247,242,0.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--rule);padding:16px 0}
+nav.top .container{display:flex;justify-content:space-between;align-items:center}
+nav.top .brand{font-family:'Playfair Display',serif;font-size:18px;font-weight:600;color:var(--ink)}
+nav.top ul{display:flex;gap:28px;list-style:none}
+nav.top a{color:var(--ink-soft);text-decoration:none;font-size:14px;font-weight:500;transition:color .2s}
+nav.top a:hover{color:var(--accent)}
+
+.hero{padding:96px 0 80px}
+.hero .eyebrow{color:var(--accent);font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;margin-bottom:24px}
+.hero h1{font-size:clamp(40px,6vw,62px);line-height:1.08;margin-bottom:28px;max-width:720px}
+.hero h1 em{font-style:italic;color:var(--accent)}
+.hero .lede{font-size:19px;color:var(--ink-soft);max-width:640px;margin-bottom:16px;line-height:1.6}
+.hero .lede:last-of-type{margin-bottom:36px}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-block;padding:14px 24px;border-radius:2px;font-size:14px;font-weight:600;letter-spacing:.02em;text-decoration:none;transition:all .2s}
+.btn-primary{background:var(--ink);color:var(--bg)}
+.btn-primary:hover{background:var(--accent)}
+.btn-secondary{background:transparent;color:var(--ink);border:1px solid var(--ink)}
+.btn-secondary:hover{background:var(--ink);color:var(--bg)}
+
+.section-head{padding:72px 0 24px;border-top:1px solid var(--rule)}
+.section-head .label{color:var(--accent);font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;margin-bottom:12px}
+.section-head h2{font-size:clamp(28px,3.5vw,38px);margin-bottom:12px}
+.section-head p{color:var(--ink-soft);font-size:17px;max-width:600px}
+
+.case{padding:40px 0 72px}
+.case .kicker{color:var(--accent);font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;margin-bottom:8px}
+.case h3{font-size:clamp(26px,3vw,34px);margin-bottom:8px;line-height:1.2}
+.case .subtitle{color:var(--ink-soft);font-style:italic;font-family:'Playfair Display',serif;font-size:18px;margin-bottom:28px}
+.case .body{font-size:16.5px;line-height:1.75}
+.case .body p{margin-bottom:14px}
+.case .cap{font-family:'Playfair Display',serif;font-style:italic;color:var(--accent);font-size:17px;margin-top:22px;margin-bottom:8px;display:block}
+.stat-strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:4px;padding:24px 0;margin:28px 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.stat{text-align:center;padding:8px 6px}
+.stat .num{font-family:'Playfair Display',serif;font-size:28px;font-weight:600;color:var(--accent);display:block;line-height:1.1;margin-bottom:4px}
+.stat .lbl{font-size:11px;color:var(--ink-soft);letter-spacing:.08em;text-transform:uppercase;font-weight:500}
+.case .link-row{margin-top:28px}
+.case .link-row a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--accent);padding-bottom:2px;font-weight:500;transition:color .2s}
+.case .link-row a:hover{color:var(--accent)}
+.case .link-row a::after{content:" \2197";color:var(--accent)}
+
+.chart-wrap{margin:32px 0;padding:28px 24px;background:var(--bg-alt);border-radius:4px}
+.chart-wrap .chart-title{font-family:'Playfair Display',serif;font-size:16px;margin-bottom:4px;color:var(--ink)}
+.chart-wrap .chart-sub{font-size:12px;color:var(--ink-soft);margin-bottom:20px}
+.bar{display:grid;grid-template-columns:140px 1fr 48px;align-items:center;gap:10px;margin-bottom:8px;font-size:13px}
+.bar .n{color:var(--ink);font-weight:500;text-align:right;padding-right:4px}
+.bar .b{height:18px;background:transparent;position:relative;border-radius:2px}
+.bar .b span{position:absolute;top:0;left:0;height:100%;background:var(--accent);border-radius:2px}
+.bar .v{font-weight:600;color:var(--ink);text-align:left;padding-left:4px}
+
+.video-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:18px;margin:28px 0 8px}
+.vcard{background:var(--bg-alt);padding:12px;border-radius:4px}
+.vcard iframe{width:100%;aspect-ratio:9/16;border:0;border-radius:2px;display:block;background:#000}
+.vcard .vt{font-family:'Playfair Display',serif;font-size:14px;margin-top:10px;color:var(--ink);font-weight:500}
+.vcard .vs{font-size:11px;color:var(--ink-soft);margin-top:2px}
+
+.about{padding:80px 0;border-top:1px solid var(--rule)}
+.about .grid{display:grid;grid-template-columns:180px 1fr;gap:48px;align-items:start}
+.about img{width:180px;height:180px;border-radius:50%;object-fit:cover;background:var(--bg-alt)}
+.about h2{font-size:34px;margin-bottom:20px}
+.about p{color:var(--ink-soft);margin-bottom:14px;font-size:16.5px;line-height:1.75}
+.about .label{color:var(--accent);font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;margin-bottom:10px}
+
+.contact{padding:80px 0 40px;border-top:1px solid var(--rule);background:var(--bg-alt)}
+.contact h2{font-size:34px;margin-bottom:16px}
+.contact p{color:var(--ink-soft);margin-bottom:28px;max-width:580px;font-size:17px}
+.contact .label{color:var(--accent);font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;margin-bottom:10px}
+.contact-list{list-style:none;display:flex;flex-direction:column;gap:10px;font-size:16px}
+.contact-list li{color:var(--ink)}
+.contact-list strong{display:inline-block;min-width:90px;color:var(--ink-soft);font-weight:500}
+.contact-list a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--accent)}
+.contact-list a:hover{color:var(--accent)}
+
+footer{padding:32px 0 48px;text-align:center;color:var(--ink-soft);font-size:13px;background:var(--bg-alt)}
+
+@media (max-width:680px){
+  .container{padding:0 22px}
+  nav.top ul{gap:16px}
+  .hero{padding:60px 0 50px}
+  .about .grid{grid-template-columns:1fr;gap:24px}
+  .about img{width:140px;height:140px}
+  .bar{grid-template-columns:110px 1fr 44px;font-size:12px}
+}
+</style>
+</head>
+<body>
+
+<nav class="top">
+  <div class="container">
+    <div class="brand">Jeffrey Cooperhouse</div>
+    <ul>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container">
+    <div class="eyebrow">Consumer Insights · Market Research · CPG & Foodservice</div>
+    <h1>Consumer research that <em>actually gets used.</em></h1>
+    <p class="lede">I'm a consumer insights and market research lead based in San Diego. For the last six years I've helped product, marketing, and R&amp;D teams translate messy consumer and category questions into clear direction they can act on.</p>
+    <p class="lede">The work below spans global CPG, San Diego retail, family entertainment, and short-form video — different industries, same thread: asking careful questions, getting close to the people you're building for, and bringing the answers back in a form the team can use on Monday.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="#work">See the work</a>
+      <a class="btn btn-secondary" href="#contact">Get in touch</a>
+    </div>
+  </div>
+</header>
+
+<section id="work">
+  <div class="container">
+    <div class="section-head">
+      <div class="label">Selected Work</div>
+      <h2>Four projects, four different questions.</h2>
+      <p>Each one started with a team trying to make a real decision. My job was to help get them to the answer with confidence and without wasting time.</p>
+    </div>
+  </div>
+
+  <article class="case">
+    <div class="container">
+      <div class="kicker">BlueNalu · Global Consumer & Chef Research</div>
+      <h3>Understanding how the world will actually eat cell-cultured seafood.</h3>
+      <div class="subtitle">A $250K, 8-market, 5-language program behind a category that didn't exist yet.</div>
+      <div class="body">
+        <p>BlueNalu is pioneering cell-cultured seafood — a genuinely new category, with no off-the-shelf market data to lean on. Before the company could make decisions about which markets to enter, which species to lead with, and how to talk about the product, we needed to hear directly from the people who would eventually eat it and cook it.</p>
+        <span class="cap">The challenge</span>
+        <p>Build a credible global evidence base for a product most consumers had never heard of — across very different food cultures — without priming answers or overstating consumer enthusiasm.</p>
+        <span class="cap">The approach</span>
+        <p>I designed and managed a $250K, multi-phase program spanning eight markets and five languages. It combined large-scale quantitative surveys with 10,000+ consumers and 80+ in-depth chef and industry expert interviews. I worked closely with regional partners to get the translations and cultural framing right, and with internal marketing and R&amp;D to make sure the questions mapped to decisions they actually needed to make.</p>
+        <span class="cap">The result</span>
+        <p>The findings became a cornerstone of BlueNalu's go-to-market thinking — shaping prioritization across regions, informing product and partnership conversations, and giving the exec team a shared evidence base in board and investor discussions. The chef interviews, in particular, gave culinary teams a grounded read on how cell-cultured seafood would need to behave in a professional kitchen to earn a spot on menus.</p>
+      </div>
+      <div class="stat-strip">
+        <div class="stat"><span class="num">$250K</span><span class="lbl">Program Budget</span></div>
+        <div class="stat"><span class="num">8</span><span class="lbl">Markets</span></div>
+        <div class="stat"><span class="num">5</span><span class="lbl">Languages</span></div>
+        <div class="stat"><span class="num">10,000+</span><span class="lbl">Consumer Voices</span></div>
+        <div class="stat"><span class="num">80+</span><span class="lbl">Chef & Expert Interviews</span></div>
+      </div>
+      <div class="link-row"><a href="https://drive.google.com/file/d/1ik3raMjSgFVJzVRELSY2AWCtN-gQM0QB/view" target="_blank" rel="noopener">Read the Consumer &amp; Chef Preferences whitepaper</a></div>
+    </div>
+  </article>
+
+  <article class="case">
+    <div class="container">
+      <div class="kicker">San Diego Asian Grocery · Market Intelligence</div>
+      <h3>Mapping a San Diego grocery segment no one had mapped before.</h3>
+      <div class="subtitle">Forty-four independent Asian grocers, ten neighborhoods, one clear picture of where the whitespace is.</div>
+      <div class="body">
+        <p>A client wanted to understand the Asian grocery landscape in San Diego County — a segment dominated by independents, underserved by syndicated data, and shaped heavily by neighborhood demographics. The question was deceptively simple: where are the real concentrations, where are the gaps, and what does that tell us about opportunity?</p>
+        <span class="cap">The challenge</span>
+        <p>Build a trustworthy, ground-truthed map of an independent-retailer segment that most market reports skip entirely — and do it at a level of detail that could actually inform a siting or partnership conversation.</p>
+        <span class="cap">The approach</span>
+        <p>I put together a county-wide audit of 44 stores across 10 neighborhoods, layering in demographics, corridor-level concentration, and cultural specialization by store. The analysis pulls apart the three distinct tiers the segment actually operates in — from the Convoy Street hub, to emerging corridors, to underserved pockets where demand outpaces supply.</p>
+      </div>
+
+      <div class="chart-wrap">
+        <div class="chart-title">Neighborhood Market Distribution</div>
+        <div class="chart-sub">Independent Asian grocery stores by San Diego neighborhood (n = 44)</div>
+        <div class="bar"><div class="n">Kearny Mesa / Convoy</div><div class="b"><span style="width:100%"></span></div><div class="v">12</div></div>
+        <div class="bar"><div class="n">Mira Mesa</div><div class="b"><span style="width:58%"></span></div><div class="v">7</div></div>
+        <div class="bar"><div class="n">City Heights</div><div class="b"><span style="width:50%"></span></div><div class="v">6</div></div>
+        <div class="bar"><div class="n">Linda Vista</div><div class="b"><span style="width:33%"></span></div><div class="v">4</div></div>
+        <div class="bar"><div class="n">Clairemont</div><div class="b"><span style="width:25%"></span></div><div class="v">3</div></div>
+        <div class="bar"><div class="n">Chula Vista</div><div class="b"><span style="width:25%"></span></div><div class="v">3</div></div>
+        <div class="bar"><div class="n">North County</div><div class="b"><span style="width:25%"></span></div><div class="v">3</div></div>
+        <div class="bar"><div class="n">Downtown / Hillcrest</div><div class="b"><span style="width:17%"></span></div><div class="v">2</div></div>
+        <div class="bar"><div class="n">El Cajon</div><div class="b"><span style="width:17%"></span></div><div class="v">2</div></div>
+        <div class="bar"><div class="n">Other</div><div class="b"><span style="width:17%"></span></div><div class="v">2</div></div>
+      </div>
+
+      <div class="body">
+        <span class="cap">The result</span>
+        <p>The report gives the client a working map of the segment — a tier-based view of where consolidation is happening, where a new entrant could realistically compete, and which corridors are still underserved relative to demographic demand. It's the kind of grounded, local intelligence that national databases simply don't capture.</p>
+      </div>
+      <div class="stat-strip">
+        <div class="stat"><span class="num">44</span><span class="lbl">Stores Audited</span></div>
+        <div class="stat"><span class="num">10</span><span class="lbl">Neighborhoods</span></div>
+        <div class="stat"><span class="num">3</span><span class="lbl">Market Tiers</span></div>
+        <div class="stat"><span class="num">County</span><span class="lbl">-Wide Coverage</span></div>
+      </div>
+      <div class="link-row"><a href="https://docs.google.com/document/d/14snUPkMLPEJrCqEUdftskMZ8cv9ycUCFaTjwadCBa70/edit" target="_blank" rel="noopener">Read the Executive Intelligence Report</a></div>
+    </div>
+  </article>
+
+  <article class="case">
+    <div class="container">
+      <div class="kicker">Brighthelm · Play Kingdom Concept &amp; Pitch</div>
+      <h3>A family entertainment concept, pressure-tested against the unit economics.</h3>
+      <div class="subtitle">Turning a play-space concept into a funded pitch, built on real demand and a defensible P&amp;L.</div>
+      <div class="body">
+        <p>Play Kingdom is a family entertainment concept targeting the gap between fast-casual kids' activities and large, day-long destinations. The founding team had a strong creative vision; what they needed next was a grounded case — one investors could interrogate line by line.</p>
+        <span class="cap">The challenge</span>
+        <p>Translate a creative concept into an investor-ready story: market demand, target audience, pricing, unit economics, and a path to breakeven that held up under scrutiny.</p>
+        <span class="cap">The approach</span>
+        <p>I worked alongside the founding team to size local family-entertainment demand, benchmark comparable venues, stress-test pricing assumptions, and build a P&amp;L that made the break-even math visible. The pitch narrative was built to feel human — a place families actually want to spend a Saturday — while the numbers underneath were built to survive a skeptical read.</p>
+        <span class="cap">The result</span>
+        <p>The pitch landed on an approximately $110K/month revenue model with a four-month path to breakeven in a 5,000 sq ft footprint, backed by the audience sizing and competitive benchmarks in the deck. More importantly, the founders walked away with a shared narrative they could take any investor through with confidence.</p>
+      </div>
+      <div class="stat-strip">
+        <div class="stat"><span class="num">~$110K</span><span class="lbl">Monthly Revenue Model</span></div>
+        <div class="stat"><span class="num">4 mo</span><span class="lbl">Path to Breakeven</span></div>
+        <div class="stat"><span class="num">5,000</span><span class="lbl">Sq Ft Footprint</span></div>
+      </div>
+      <div class="link-row"><a href="https://docs.google.com/presentation/d/1UA64aQrTfsO5SQATkunDms33pDnDCLSmmqGwnhpicq0/edit" target="_blank" rel="noopener">View the Play Kingdom pitch deck</a></div>
+    </div>
+  </article>
+
+  <article class="case">
+    <div class="container">
+      <div class="kicker">Wandering in Paradise · Short-Form Video Case Study</div>
+      <h3>Testing what makes a short-form video worth staying for.</h3>
+      <div class="subtitle">Five shorts, five San Diego places, one honest study of what holds attention.</div>
+      <div class="body">
+        <p>Wandering in Paradise is a personal short-form video project built around San Diego places — a running experiment in how framing, pacing, and on-camera presence shape completion rates and audience response.</p>
+        <span class="cap">The approach</span>
+        <p>Each short is a small test: different hooks, different cuts, different ways of showing up on camera. I track what lands — not just views, but watch-through, saves, and comments — and carry the lessons into the next one. It's the same instinct I bring to consumer research: form a hypothesis, watch real people interact with it, adjust, and try again.</p>
+        <span class="cap">Watch the series</span>
+      </div>
+      <div class="video-grid">
+        <div class="vcard">
+          <iframe src="https://www.youtube.com/embed/o_n0dl6Npx0" title="China Super Buffet" loading="lazy" allowfullscreen></iframe>
+          <div class="vt">China Super Buffet</div>
+          <div class="vs">Kearny Mesa · Food</div>
+        </div>
+        <div class="vcard">
+          <iframe src="https://www.youtube.com/embed/aPMpUlOPgNY" title="Play City" loading="lazy" allowfullscreen></iframe>
+          <div class="vt">Play City</div>
+          <div class="vs">Family Entertainment</div>
+        </div>
+        <div class="vcard">
+          <iframe src="https://www.youtube.com/embed/gpkbbBrGGEg" title="Sweet Trend" loading="lazy" allowfullscreen></iframe>
+          <div class="vt">Sweet Trend</div>
+          <div class="vs">Dessert · Culture</div>
+        </div>
+        <div class="vcard">
+          <iframe src="https://www.youtube.com/embed/5yVhkbTb4Tc" title="The Henry" loading="lazy" allowfullscreen></iframe>
+          <div class="vt">The Henry</div>
+          <div class="vs">Dining · Atmosphere</div>
+        </div>
+        <div class="vcard">
+          <iframe src="https://www.youtube.com/embed/_08DY7DLpEE" title="Museum of Illusions" loading="lazy" allowfullscreen></iframe>
+          <div class="vt">Museum of Illusions</div>
+          <div class="vs">Attraction · Experience</div>
+        </div>
+      </div>
+      <div class="link-row"><a href="https://docs.google.com/document/d/1vu-B6vm1lfhHum1kgXQzEcAOFme0zRUX7klRxZYxbWQ/edit" target="_blank" rel="noopener">Read the full case study</a></div>
+    </div>
+  </article>
+</section>
+
+<section id="about" class="about">
+  <div class="container">
+    <div class="grid">
+      <img src="https://placehold.co/180x180/E4DED3/2B2A28?text=JC" alt="Jeffrey Cooperhouse">
+      <div>
+        <div class="label">About</div>
+        <h2>A little about how I work.</h2>
+        <p>I came up in consumer insights the practical way — running real studies for real decisions, learning what makes a finding land with a team and what makes one quietly get shelved.</p>
+        <p>At BlueNalu, I led global research programs across eight markets and five languages, working closely with marketing, R&amp;D, and exec stakeholders to turn complex consumer data into clear direction. Before and around that, I've taken on projects in local retail intelligence, family entertainment pitches, and short-form video — usually because the question was interesting and the team was good.</p>
+        <p>My bias: start with the decision you're trying to make, design the research backward from there, stay curious about the people in the data, and hand back something a team can actually use. I share credit naturally, I'm easy to work with, and I'm happy digging into the unglamorous parts of a project.</p>
+        <p>Based in San Diego, CA. Open to remote and hybrid roles in CPG, foodservice, and consumer technology — and to consulting conversations when the fit is right.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="container">
+    <div class="label">Contact</div>
+    <h2>Happy to talk.</h2>
+    <p>Whether you're scoping a research program, building a pitch, or just thinking out loud about a consumer question — drop a line. I read everything and reply personally.</p>
+    <ul class="contact-list">
+      <li><strong>Email</strong> <a href="mailto:jeffmcoop@gmail.com">jeffmcoop@gmail.com</a></li>
+      <li><strong>LinkedIn</strong> <a href="https://linkedin.com/in/jeffcooperhouse" target="_blank" rel="noopener">linkedin.com/in/jeffcooperhouse</a></li>
+      <li><strong>Location</strong> San Diego, CA</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <div class="container">&copy; 2026 Jeffrey Cooperhouse · Consumer Insights &amp; Strategy</div>
+</footer>
+
+</body>
+</html>
